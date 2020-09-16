@@ -19,6 +19,7 @@ $cyan: #6cb2eb;
 $gray:#707070;
 $white:#FFFFFF;
 $black:#333333;
+$gold:gold;
 
 //media query
 $pc:1025;
@@ -56,14 +57,14 @@ $phone:767;
     @include phone{font-size: 20px;}
 }
 .txt_M{
-    @include pc{font-size: 20px;}
+    @include pc{font-size: 24px;}
     @include pad{font-size: 20px;}
-    @include phone{font-size: 16px;}
+    @include phone{font-size: 14px;}
 }
 .txt_S{
     @include pc{font-size: 20px;} 
     @include pad{font-size: 18px;}
-    @include phone{font-size: 14px;}
+    @include phone{font-size: 10px;}
 }
 .txt_XS{
     @include pc{font-size: 16px;} 
@@ -73,7 +74,7 @@ $phone:767;
 .txt_XXS{
     @include pc{font-size: 12px;}
     @include pad{font-size: 10px;}
-    @include phone{font-size: 8px;}
+    @include phone{font-size: 6px;}
 }
 .title_w{
     @include pc{font-size: 75px;} 

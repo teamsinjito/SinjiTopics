@@ -1,0 +1,76 @@
+header{
+    position: fixed;
+    .wrapper{
+        position: relative;
+        align-items: center;
+        display: flex;
+        margin-top: 3%;
+        @include pad{
+            margin-top: 9%;
+        }
+        @include phone{
+            margin-top: 10%;
+        }
+        .text-wrapper{
+            flex-grow: 2;
+            position: relative;
+            display: inline-block;
+            input{
+                font-family: $font-family-sans-serif;
+                color: $black;
+                letter-spacing: 1px;
+                line-height: 30px;
+                @include phone{
+                    line-height: 28px;
+                }
+                font-size: 16px;
+                border: none;
+                border-radius: 5px;
+                &:focus {
+                    outline: none !important;
+                    box-shadow: none;
+                }
+            }
+            #search-icon{
+                position: absolute;
+                top: 7px;
+                right: 15px;
+                color: $blue;
+            }
+        }
+        #redo-icon{
+            font-size: 16px;
+            display: flex;
+            margin-left: 1%;
+            align-items: center;
+            background-color:$white;
+            border-radius: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            height: 100%;
+            color: $gray;
+            &:hover{
+                cursor: pointer;
+                opacity: .7;
+            }
+        }
+
+        #setting-icon{
+            font-size: 18px;
+            display: flex;
+            margin-left: 1%;
+            align-items: center;
+            background-color: $white;
+            border-radius: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            height: 100%;
+
+            color: $gray;
+            &:hover{
+                cursor: pointer;
+                opacity: .7;
+            }
+        }
+    }
+}

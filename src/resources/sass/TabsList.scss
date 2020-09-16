@@ -1,0 +1,84 @@
+.nav-wrapper{
+    top:15%;
+    width: 100%;
+    overflow-x: scroll;
+    &::-webkit-scrollbar{display: none;}
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: hidden;
+    background-color: $white;
+
+    .nav{
+        @include pc{
+            width: 1440px;
+        }
+        @include pad{
+            width: 1440px;
+        }
+        @include phone{
+            width: 960px;
+        }
+
+        .nav-item{
+            @include pc{
+                width: 180px;
+            }
+            @include pad{
+                width: 180px;
+            }
+            @include phone{
+                width: 120px;
+            }
+            height: 100%;
+            text-align: center;
+            .nav-link{
+                color: white!important;
+            }
+            .active{
+                transform: scale(1.2);
+            }
+            
+        }
+
+        .contents-domestic{
+            .nav-link{
+                background-color: $red!important;
+            }
+        }
+        .contents-overseas{
+            .nav-link{
+                background-color: $orange!important;
+            }
+        }
+        .contents-economy{
+            .nav-link{
+                background-color: $yellow!important;
+            }
+        }
+        .contents-technology{
+            .nav-link{
+                background-color: $green!important;
+            }
+        }
+        .contents-sports{
+            .nav-link{
+                background-color: $teal!important;
+            }
+        }
+        .contents-entertainment{
+            .nav-link{
+                background-color: $cyan!important;
+            }
+        }
+        .contents-history{
+            .nav-link{
+                background-color: $indigo!important;
+            }
+        }
+        .contents-favorite{
+            .nav-link{
+                background-color: $purple!important;
+            }
+        }
+    }
+}

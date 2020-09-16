@@ -24,7 +24,9 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "image-to-base64": "^2.1.1",
         "vue-loading-overlay": "^3.4.0",
-        "vue-loading-template": "^1.3.2"
+        "vue-loading-template": "^1.3.2",
+        "vuex": "^3.5.1"
     }
 }

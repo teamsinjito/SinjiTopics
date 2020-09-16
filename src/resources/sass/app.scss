@@ -7,4 +7,10 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+@import './Common';
+@import './VueLoading';
+@import './HeaderForm';
 @import './main';
+@import './TabsList';
+@import './TanContentsDetails';
+@import './OpenCloseIcon';

@@ -1,0 +1,174 @@
+.grid-containers{
+    display: grid;
+    grid-template-rows: repeat(auto-fill, 163px);
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-auto-flow: dense;
+
+    @include phone{
+        grid-template-rows: repeat(auto-fill, calc(163px / 2));
+        grid-template-columns: 150px 150px;
+    }
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 2%;
+    .card{
+        display: flex;
+        flex-direction: column;
+        a{
+            color: $black!important;
+
+        }
+    }
+    .standard-style{
+
+        height: 338px;
+        @include phone{
+            height: calc(338px / 2);
+        }
+        .img-wrapper{
+            max-height: 174px;
+            @include phone{
+                height: 92.5px;
+            }
+            overflow: hidden;
+            width: 100%;
+            img{
+                max-height: 174px;
+                height: auto;
+                max-width: 100%;
+            }
+        }
+
+    }
+    .title-only-style{
+        height: 163px;
+        @include phone{
+            height: 74.5px;
+        }
+
+    }
+
+    .h-large-style{
+        height: 513px;
+        @include phone{
+            height: calc(513px / 2);
+        }
+        .img-wrapper{
+            max-height: 374px;
+            @include phone{
+                height: 181px;
+            }
+            overflow: hidden;
+            width: 100%;
+            img{
+                max-height: 374px;
+                height: auto;
+                max-width: 100%;
+            }
+        }
+    }
+    .w-large-style{
+        height: 338px;
+        @include phone{
+            height: calc(338px / 2);
+        }
+        .img-wrapper{
+            max-height: 338px;
+            @include phone{
+                height: calc(338px / 2);
+            }
+            overflow: hidden;
+            width: 100%;
+            img{
+                max-height: 338px;
+                height: auto;
+                max-width: 100%;
+            }
+        }
+        .card-img-overlay{
+            
+            background: linear-gradient(0deg,$black,transparent);
+            .line-limit {
+                -webkit-line-clamp: 2!important;
+            }
+            a{
+                color: $white!important;
+            }
+            small{
+                color: $white!important;
+            }
+            padding-top: 0!important;
+            padding-bottom: 0!important;
+            @include phone{
+                padding: 0;
+                padding-left: 5px!important;
+                padding-right: 5px!important;                
+            }
+            i{
+                color: $white;
+            }
+            top:unset;
+            bottom:0!important;
+
+        }
+    }
+    .card-body{
+        max-height: calc(338px - 42px);
+        @include phone{
+            padding:0;
+            padding-left: 5px!important;
+            padding-right: 5px!important;
+            max-height: calc((338px / 2) - 42px);
+        }
+
+
+    }
+    .card-title{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        -webkit-line-clamp: 3;
+        font-weight: bold;
+        max-height: 4.8em;
+        margin: 0!important;
+        line-height: 1.5;
+    }
+    .line-limit-two{
+        @include phone{
+            -webkit-line-clamp: 2!important;
+        }
+    }
+    .card-bottom{
+        max-height: 42px;
+        display: flex;
+        justify-content: space-around;
+        @include phone{
+            padding-left: 5px!important;
+            padding-right: 5px!important;
+        }
+        small{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 80%;
+            display: block;
+            overflow: hidden;
+            color: $gray;
+        }
+        div{
+            width: 20%;
+            text-align: right;
+
+            i{
+                transition: all .3s ease;
+                &:hover{
+                    cursor: pointer;
+                    transform: scale(1.2);
+                    
+                }
+            }
+            .fas{
+                color: $gold;
+            }
+        }
+    }
+}
