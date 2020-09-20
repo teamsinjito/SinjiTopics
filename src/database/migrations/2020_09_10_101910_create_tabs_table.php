@@ -15,6 +15,7 @@ class CreateTabsTable extends Migration
     {
         Schema::create('tabs', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('key',60)->unique();
             $table->string('name',20);
             $table->string('default',10)->nullable();
             $table->timestamps();

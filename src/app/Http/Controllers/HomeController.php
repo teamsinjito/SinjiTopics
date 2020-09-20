@@ -20,7 +20,7 @@ class HomeController extends Controller
     {
         //タブテーブルからタブを全て取得
         $tabs = DB::table('tabs')
-                ->select('id','name','default')
+                ->select('id','key','name','default')
                 ->orderBy('id')
                 ->get();
 

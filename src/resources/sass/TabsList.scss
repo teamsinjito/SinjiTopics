@@ -1,5 +1,5 @@
 .nav-wrapper{
-    top:15%;
+
     width: 100%;
     overflow-x: scroll;
     &::-webkit-scrollbar{display: none;}
@@ -10,10 +10,10 @@
 
     .nav{
         @include pc{
-            width: 1440px;
+            width: 100%;
         }
         @include pad{
-            width: 1440px;
+            width: 100%;
         }
         @include phone{
             width: 960px;
@@ -21,10 +21,10 @@
 
         .nav-item{
             @include pc{
-                width: 180px;
+                width: calc(100% / 8);
             }
             @include pad{
-                width: 180px;
+                width: calc(100% / 8);
             }
             @include phone{
                 width: 120px;

@@ -16,20 +16,25 @@ class TabTableSeeder extends Seeder
         //
         Tab::truncate();
         
-        $tabs=array('国内','国際','政治・経済','IT・技術','スポーツ','エンタメ','履歴','お気に入り');
+        $tabs=[
+            ["contents-domestic","国内","active"],
+            ["contents-overseas","国際",""],
+            ["contents-economy","政治・経済",""],
+            ["contents-technology","IT・技術",""],
+            ["contents-sports","スポーツ",""],
+            ["contents-entertainment","エンタメ",""],
+            ["contents-history","履歴",""],
+            ["contents-favorite","お気に入り",""]
+        ];
 
-        foreach($tabs as $index => $tab){
-            if($index==0){
-                Tab::create([
-                    'name'=>$tab,
-                    'default'=>"active"
-                ]);
-            }else{
-                Tab::create([
-                    'name'=>$tab
-                ]);
+        foreach($tabs as $tab){
 
-            }
+            Tab::create([
+                'key'=>$tab[0],
+                'name'=>$tab[1],
+                'default'=>$tab[2]
+            ]);
+
         }
 
     }

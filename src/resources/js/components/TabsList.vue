@@ -22,7 +22,7 @@
                         <tab-contents-details :key="topic.id" :filter=filter v-for="topic in content.topics" :topic="topic"></tab-contents-details>
                     </div>
 
-
+                    <p class="text-center txt_XS mt-5">© 2020 Team SINJITO</p>
                 </div>            
             </transition>
         </section>

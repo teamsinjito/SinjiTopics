@@ -68,14 +68,18 @@ export default {
         //         //タブ一覧取得
         //         if(response.data.tabs.length){
 
-        //             this.tabs=response.data.tabs
+
+        //             this.$store.commit('setTabs',response.data.tabs)
 
         //         }
                 
         //     })
+
+        this.$store.commit('setIndexedDB')
         this.$store.commit('matchingFavorite')
-        this.$store.commit('getFavoriteTopics')
-        this.$store.commit('getHistoryTopics')
+        this.$store.commit('selectDB',{table:'history'})
+        this.$store.commit('selectDB',{table:'favorite'})
+
         
     },
 

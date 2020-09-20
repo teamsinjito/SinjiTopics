@@ -11234,10 +11234,16 @@ header .wrapper #setting-icon:hover {
 main {
   height: 85%;
   position: absolute;
-  top: 95% !important;
+  top: calc(100vh - 41px);
   background-color: #FFFFFF;
   width: 100%;
   transition: 0.7s;
+}
+
+@media (max-width: 767px) {
+  main {
+    top: calc(100vh - 151px);
+  }
 }
 
 .open-category {
@@ -11261,12 +11267,23 @@ main {
 
 .tab-contents .tab-content {
   height: 100%;
-  padding-bottom: 10%;
+  padding-bottom: 6.5%;
   overflow-y: scroll;
 }
 
+@media (max-width: 1024px) {
+  .tab-contents .tab-content {
+    padding-bottom: 12%;
+  }
+}
+
+@media (max-width: 767px) {
+  .tab-contents .tab-content {
+    padding-bottom: 23%;
+  }
+}
+
 .nav-wrapper {
-  top: 15%;
   width: 100%;
   overflow-x: scroll;
   -ms-overflow-style: none;
@@ -11281,13 +11298,13 @@ main {
 
 @media (min-width: 1025px) {
   .nav-wrapper .nav {
-    width: 1440px;
+    width: 100%;
   }
 }
 
 @media (max-width: 1024px) {
   .nav-wrapper .nav {
-    width: 1440px;
+    width: 100%;
   }
 }
 
@@ -11304,13 +11321,13 @@ main {
 
 @media (min-width: 1025px) {
   .nav-wrapper .nav .nav-item {
-    width: 180px;
+    width: calc(100% / 8);
   }
 }
 
 @media (max-width: 1024px) {
   .nav-wrapper .nav .nav-item {
-    width: 180px;
+    width: calc(100% / 8);
   }
 }
 
@@ -11363,7 +11380,7 @@ main {
 .grid-containers {
   display: grid;
   grid-template-rows: repeat(auto-fill, 163px);
-  grid-template-columns: 300px 300px 300px 300px;
+  grid-template-columns: repeat(auto-fill, 300px);
   grid-auto-flow: dense;
   justify-content: center;
   gap: 12px;

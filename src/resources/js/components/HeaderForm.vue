@@ -16,16 +16,16 @@
         </div>
 
         <!-- リロードボタン -->
-        <div id="redo-icon">
+        <div id="redo-icon" @click="redo">
             <span>
                 <i class="fas fa-redo"></i>
             </span>
         </div>
 
         <!-- 設定ボタン -->
-        <div id="setting-icon">
+        <div id="setting-icon" @click="deleteHistory">
             <span>
-                <i class="fas fa-cog"></i>
+                <i class="far fa-trash-alt"></i>
             </span>
         </div>
 
@@ -51,6 +51,20 @@ export default {
             }
         }
     },
+    methods:{
+        redo:function(){
+            location.reload();
+        },
+        deleteHistory:function(){
+
+            var message = "履歴を全て削除してもいいですか？";
+
+            if(confirm(message)){
+
+                this.$store.commit('deleteHistory')
+            }
+        }
+    }
 
 }
 </script>

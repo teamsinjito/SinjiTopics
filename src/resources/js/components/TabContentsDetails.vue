@@ -4,8 +4,7 @@
     <div v-if="topic.thumbnail == 'standard' && topic.title.includes(filter)" class="card standard-style" style="grid-row: span 2; grid-column: span 1;">
         <!-- 画像イメージ -->
         <div class="img-wrapper">
-            <img v-if="topic.image.includes('data:image/')" :id="topic.image" class="card-img-top" :src="topic.image">
-            <img v-else :id="topic.image" class="card-img-top" :src='`../storage/img/sample/${topic.image}`'>
+            <img  class="card-img-top" :src="topic.image">
         </div>
 
         <!-- 本文 -->
@@ -15,7 +14,7 @@
 
         <!-- 出典およびお気に入りボタン -->
         <div class="card-bottom pl-3 pr-3">
-            <small>{{topic.owner}}</small>
+            <small><a :href="topic.url" target="_blank" rel="noopener noreferrer">{{topic.owner}}</a></small>
             <favorite-button :topic="topic"></favorite-button>
         </div>
 
@@ -31,7 +30,7 @@
 
         <!-- 出典およびお気に入りボタン -->
         <div class="card-bottom pl-3 pr-3">
-            <small>{{topic.owner}}</small>
+            <small><a :href="topic.url" target="_blank" rel="noopener noreferrer">{{topic.owner}}</a></small>
             <favorite-button :topic="topic"></favorite-button>
         </div>
 
@@ -41,8 +40,7 @@
     <div v-else-if="topic.thumbnail == 'h-large' && topic.title.includes(filter)" class="card h-large-style" style="grid-row: span 3; grid-column: span 1;">
         <!-- 画像イメージ -->
         <div class="img-wrapper">
-            <img v-if="topic.image.includes('data:image/')" :id="topic.image" class="card-img-top" :src="topic.image">
-            <img v-else :id="topic.image" class="card-img-top" :src='`../storage/img/sample/${topic.image}`'>
+            <img  class="card-img-top" :src="topic.image">
         </div>
 
         <!-- 本文 -->
@@ -52,7 +50,7 @@
 
         <!-- 出典およびお気に入りボタン -->
         <div class="card-bottom pl-3 pr-3">
-            <small>{{topic.owner}}</small>
+            <small><a :href="topic.url" target="_blank" rel="noopener noreferrer">{{topic.owner}}</a></small>
             <favorite-button :topic="topic"></favorite-button>
         </div>
 
@@ -63,8 +61,7 @@
 
         <!-- 画像イメージ -->
         <div class="img-wrapper">
-            <img v-if="topic.image.includes('data:image/')" :id="topic.image" class="card-img-top" :src="topic.image">
-            <img v-else :id="topic.image" class="card-img-top" :src='`../storage/img/sample/${topic.image}`'>
+            <img  class="card-img-top" :src="topic.image">
         </div>
 
         <!-- オーバーレイ -->
@@ -75,7 +72,7 @@
 
             <!-- 出典およびお気に入りボタン -->
             <div class="card-bottom">
-                <small>{{topic.owner}}</small>
+                <small><a :href="topic.url" target="_blank" rel="noopener noreferrer">{{topic.owner}}</a></small>
                 <favorite-button :topic="topic"></favorite-button>
             </div>
 
@@ -105,70 +102,10 @@ export default {
     },
     methods:{
         openMovie:function(topic){
-                    
-            var maxCont=0;
-            var fHistory
-            //imgタグを取得
-            var img = document.getElementById(this.topic.image)
 
-            // 画像があればbase64に変換
-            if(img!=null){
+            this.$store.commit('insertDB',{topic:this.topic,table:'history'})
 
-                // img -> base64
-                img = this.imageToBase64(img,"img/jpg");
-            }else{
-                img=""
-            }
-
-            if(localStorage.getItem(this.topic.id+"_history")!=null){
-                localStorage.removeItem(this.topic.id+"_history");
-            }else{
-                
-
-                //お気に入り数の上限チェック
-                for(let i =localStorage.length-1 ; i >= 0  ; i--){
-                    let key = localStorage.key(i);
-
-                    if(key.includes("_history")){
-                        fHistory=key
-                        maxCont++;
-
-                    }
-                }
-                
-            }
-
-            if(maxCont >= 6){
-                localStorage.removeItem(fHistory);
-            }
-
-
-            // ローカルストレージに保存
-            localStorage.setItem(this.topic.id+"_history", JSON.stringify(
-                {id:this.topic.id,
-                title:this.topic.title,
-                image:img,
-                thumbnail:this.topic.thumbnail,
-                owner:this.topic.owner,
-                favorite:this.topic.favorite
-                }
-            ));
-
-            this.$store.commit('getHistoryTopics')
-
-        },
-
-        //画像をBase64に変換
-        imageToBase64:function(img,mim_type){
-            var canvas = document.createElement('canvas');
-            canvas.width=img.width;
-            canvas.height=img.height;
-
-            var ctx=canvas.getContext('2d');
-            ctx.drawImage(img,0,0);
-
-            return canvas.toDataURL(mim_type);
-        },
+        }
         
     }
 
