@@ -78,7 +78,11 @@ export default {
                     this.$store.commit('setTabs',response.data.tabs)
 
                 }
+
                 
+            })
+            .catch((err)=>{
+                console.log(err + "errorMessage")
             })
 
         this.$store.commit('setIndexedDB')
