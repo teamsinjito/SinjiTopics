@@ -11599,6 +11599,13 @@ main {
   color: gold;
 }
 
+.modal-view {
+  z-index: 100;
+  position: fixed;
+  height: 100vh;
+  background-color: #FFFFFF;
+}
+
 .open-close {
   position: fixed;
 }

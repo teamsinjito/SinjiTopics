@@ -102,7 +102,7 @@ export default {
     },
     methods:{
         openMovie:function(topic){
-
+            this.$store.commit('openCloseModal',this.topic)
             this.$store.commit('insertDB',{topic:this.topic,table:'history'})
 
         }
