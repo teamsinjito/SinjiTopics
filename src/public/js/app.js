@@ -1985,7 +1985,7 @@ __webpack_require__.r(__webpack_exports__);
         _this.$store.commit('setTabs', response.data.tabs);
       }
     })["catch"](function (err) {
-      console.log(err + "errorMessage");
+      console.log(err);
     });
     this.$store.commit('setIndexedDB');
     this.$store.commit('matchingFavorite');

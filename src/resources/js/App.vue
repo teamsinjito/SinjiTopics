@@ -82,7 +82,7 @@ export default {
                 
             })
             .catch((err)=>{
-                console.log(err + "errorMessage")
+                console.log(err)
             })
 
         this.$store.commit('setIndexedDB')
