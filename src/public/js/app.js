@@ -1984,6 +1984,8 @@ __webpack_require__.r(__webpack_exports__);
       if (response.data.tabs.length) {
         _this.$store.commit('setTabs', response.data.tabs);
       }
+    })["catch"](function (err) {
+      console.log(err + "errorMessage");
     });
     this.$store.commit('setIndexedDB');
     this.$store.commit('matchingFavorite');
