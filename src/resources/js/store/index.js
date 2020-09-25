@@ -6,17 +6,17 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
     state: {
-        // tabs:[],
-        tabs:[  //タブ一覧（AWSテスト用）
-            {key:"contents-domestic",name:"国内",default:"active"},
-            {key:"contents-overseas",name:"国際",default:""},
-            {key:"contents-economy",name:"政治・経済",default:""},
-            {key:"contents-technology",name:"IT・技術",default:""},
-            {key:"contents-sports",name:"スポーツ",default:""},
-            {key:"contents-entertainment",name:"エンタメ",default:""},
-            {key:"contents-history",name:"履歴",default:""},
-            {key:"contents-favorite",name:"お気に入り",default:""}
-        ],
+        tabs:[],
+        // tabs:[  //タブ一覧（AWSテスト用）
+        //     {key:"contents-domestic",name:"国内",default:"active"},
+        //     {key:"contents-overseas",name:"国際",default:""},
+        //     {key:"contents-economy",name:"政治・経済",default:""},
+        //     {key:"contents-technology",name:"IT・技術",default:""},
+        //     {key:"contents-sports",name:"スポーツ",default:""},
+        //     {key:"contents-entertainment",name:"エンタメ",default:""},
+        //     {key:"contents-history",name:"履歴",default:""},
+        //     {key:"contents-favorite",name:"お気に入り",default:""}
+        // ],
         contents:{  //記事（AWSテスト用）
             domestic:{
                 key:"contents-domestic",
@@ -144,7 +144,8 @@ const store = new Vuex.Store({
 
         },
         indexedDB:null,  //indexedDB
-
+        isModal:false, //モーダル表示フラグ
+        modalTopic:"" //モーダル表示用記事
     },
 
     mutations: {
@@ -264,11 +265,19 @@ const store = new Vuex.Store({
 
         },
 
+        //履歴削除
         deleteHistory:function(state){       
             state.indexedDB.history.clear().then(()=>{
                 state.contents.history.topics=[]
             })
-        }
+        },
+
+        //モーダルウィンドウ表示、非表示
+        openCloseModal:function(state,topic){
+            state.isModal=!state.isModal
+            state.modalTopic=topic
+        },
+
 
 
     },

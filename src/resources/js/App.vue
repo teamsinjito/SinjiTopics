@@ -30,6 +30,12 @@
             <open-close-icon :flg="openTabsListFlg" @update="openTabsListFlg = $event"></open-close-icon>
 
         </div>
+
+        <!-- モーダル -->
+        <div v-if="this.$store.state.isModal" class="w-100 h-100 modal-view">
+            <p>{{this.$store.state.modalTopic.text}}</p>
+            <a href="#" @click="closeMovie">X</a>
+        </div>
     </div>
 </template>
 
@@ -61,19 +67,19 @@ export default {
     //DB接続時に使用
     created:function(){
 
-        // axios
-        //     .get('/get/index')
-        //     .then((response)=>{
+        axios
+            .get('/get/index')
+            .then((response)=>{
 
-        //         //タブ一覧取得
-        //         if(response.data.tabs.length){
+                //タブ一覧取得
+                if(response.data.tabs.length){
 
 
-        //             this.$store.commit('setTabs',response.data.tabs)
+                    this.$store.commit('setTabs',response.data.tabs)
 
-        //         }
+                }
                 
-        //     })
+            })
 
         this.$store.commit('setIndexedDB')
         this.$store.commit('matchingFavorite')
@@ -82,6 +88,11 @@ export default {
 
         
     },
+    methods:{
+        closeMovie:function(){
+            this.$store.commit('openCloseModal',"")
+        }
+    }
 
 }
 </script>
