@@ -8,6 +8,7 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 import store from "./store/index.js";
+import AudioVisual from 'vue-audio-visual'
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -20,6 +21,9 @@ import store from "./store/index.js";
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('App', require('./App.vue').default);
+var VueTouch = require('vue-touch')
+Vue.use(VueTouch, {name: 'v-touch'})
+Vue.use(AudioVisual)
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

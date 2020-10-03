@@ -154,21 +154,5 @@
             overflow: hidden;
             color: $gray;
         }
-        div{
-            width: 20%;
-            text-align: right;
-
-            i{
-                transition: all .3s ease;
-                &:hover{
-                    cursor: pointer;
-                    transform: scale(1.2);
-                    
-                }
-            }
-            .fas{
-                color: $gold;
-            }
-        }
     }
 }

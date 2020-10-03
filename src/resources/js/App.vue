@@ -19,7 +19,7 @@
                 <img src="img/logo.png" alt="SinjiTopics">
             </div>
 
-            <!-- 記事一覧 -->
+        <!-- 記事一覧 -->
             <main :class="{'open-category':openTabsListFlg}">
                 <!-- タブ項目 -->
                 <tabs-list :active-tab="activeTab" :filter="inputTxt" @update="activeTab = $event" @updateFlg="openTabsListFlg = $event"></tabs-list>
@@ -33,8 +33,9 @@
 
         <!-- モーダル -->
         <div v-if="this.$store.state.isModal" class="w-100 h-100 modal-view">
-            <p>{{this.$store.state.modalTopic.text}}</p>
-            <a href="#" @click="closeMovie">X</a>
+            <!-- <p>{{this.$store.state.modalTopic.text}}</p> -->
+            <modal></modal>
+            
         </div>
     </div>
 </template>
@@ -43,6 +44,7 @@
 import HeaderForm from './components/HeaderForm.vue';
 import TabsList from './components/TabsList.vue';
 import OpenCloseIcon from './components/OpenCloseIcon';
+import Modal from './components/Modal';
 import { VueLoading } from 'vue-loading-template'
 
 export default {
@@ -51,6 +53,7 @@ export default {
         HeaderForm,
         TabsList,
         OpenCloseIcon,
+        Modal,
         VueLoading
     },
 
@@ -92,11 +95,7 @@ export default {
 
         
     },
-    methods:{
-        closeMovie:function(){
-            this.$store.commit('openCloseModal',"")
-        }
-    }
+
 
 }
 </script>

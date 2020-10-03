@@ -45,6 +45,9 @@ $phone:767;
     src: url('/fonts/Harenosora.otf') format('opentype');
 }
 
+$containerWidthPc:1140px;
+$containerWidthPad:960px;
+$containerWidthPhone:100vw;
 // Font Size
 .txt_XL{
     @include pc{font-size: 41px;} 
