@@ -96,14 +96,24 @@ export default {
         topic:{
             type:Object //記事
         },
+        category:{
+            type:String //カテゴリー
+        },
         filter:{
             type:String //検索文字列
+        },
+        index:{
+            type:Number
         }
     },
     methods:{
         openMovie:function(topic){
-            this.$store.commit('openCloseModal',this.topic)
-            this.$store.commit('insertDB',{topic:this.topic,table:'history'})
+            console.log(this.category)
+            if(this.category!="contents-history"){
+
+                this.$store.commit('insertDB',{topic:this.topic,table:'history'})
+            }
+            this.$store.commit('openCloseModal',{topicIndex:this.index,category:this.category.substr(9)})
 
         }
         

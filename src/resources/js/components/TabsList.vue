@@ -19,7 +19,7 @@
                     
                     <!-- 記事 -->
                     <div class="grid-containers">
-                        <tab-contents-details :key="topic.id" :filter=filter v-for="topic in content.topics" :topic="topic"></tab-contents-details>
+                        <tab-contents-details  :filter=filter v-for="(topic,index) in content.topics" :key="index" :index="index" :topic="topic" :category="content.key"></tab-contents-details>
                     </div>
 
                     <p class="text-center txt_XS mt-5">© 2020 Team SINJITO</p>

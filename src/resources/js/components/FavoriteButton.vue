@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="favorite-button-area">
         <!-- お気に入り済 -->
         <i v-if="topic.favorite" class="fas fa-bookmark" @click="deleteFavorite"></i>
 
@@ -20,9 +20,17 @@ export default {
 
         //お気に入り追加
         addFavorite:function(){
-
+            console.log(this.topic)
             this.$store.commit('updateFavoriteFlg',{id:this.topic.id,val:true})
-            this.$store.commit('insertDB',{topic:this.topic,table:'favorite'})
+
+            if((this.$store.state.isModal && this.$store.state.modalCategory =='favorite')){
+
+                this.$store.commit('spliceFavIdWithModal',this.topic.id)
+
+            }else{
+                    
+                this.$store.commit('insertDB',{topic:this.topic,table:'favorite'})
+            }
 
         },
 
@@ -30,8 +38,16 @@ export default {
         deleteFavorite:function(){
 
             this.$store.commit('updateFavoriteFlg',{id:this.topic.id,val:false})
-            this.$store.commit('deleteDB',{table:'favorite',data:this.topic.id}
-            )
+
+            if(this.$store.state.isModal && this.$store.state.modalCategory =='favorite'){
+
+                this.$store.commit('getDeleteFavWithModal',this.topic.id)
+                
+
+            }else{
+                this.$store.commit('deleteDB',{table:'favorite',data:this.topic.id})
+            }
+
 
         }
     }
