@@ -16,7 +16,7 @@
 
         </v-touch>
 
-        <audio v-if="this.$store.state.autoPlay.music" id="audio" :src="`../storage/music/${this.topics[tpi].bgm_name}.mp3`" autoplay loop>
+        <audio v-if="this.$store.state.autoPlay.music　&& this.$store.state.autoPlay.movie" id="audio" :src="`../storage/music/${this.topics[tpi].bgm_name}.mp3`" autoplay loop>
             あなたのブラウザーは <code>audio</code>要素をサポートしていません。
         </audio>
         <audio v-else id="audio" :src="`../storage/music/${this.topics[tpi].bgm_name}.mp3`" loop>

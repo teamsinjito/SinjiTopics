@@ -48265,7 +48265,7 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      this.$store.state.autoPlay.music
+      this.$store.state.autoPlay.music && this.$store.state.autoPlay.movie
         ? _c(
             "audio",
             {
