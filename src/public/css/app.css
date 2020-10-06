@@ -11061,7 +11061,6 @@ body {
 a {
   text-decoration: none;
   background-color: transparent;
-  color: #707070 !important;
   -webkit-touch-callout: none;
 }
 
@@ -11596,7 +11595,7 @@ main {
 }
 
 .favorite-button-area .fas {
-  color: gold;
+  color: gold !important;
 }
 
 .modal-view {
@@ -11691,17 +11690,13 @@ main {
   content: " ";
 }
 
-.modal-contents .text-area p {
+.modal-contents .text-area .movie-area .end-roll {
   text-align: center;
   position: absolute;
   word-break: keep-all;
   overflow-wrap: break-word;
   color: floralwhite;
   line-height: 5;
-  -webkit-animation: SlideIn 30s infinite;
-          animation: SlideIn 30s infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
 }
 
 .modal-contents .text-area .modal-play-area {
@@ -11720,9 +11715,9 @@ main {
   opacity: 0.5;
 }
 
-@-webkit-keyframes SlideIn {
+@-webkit-keyframes EndRoll1 {
   0% {
-    transform: translateY(90%);
+    transform: translateY(33%);
   }
 
   100% {
@@ -11730,14 +11725,99 @@ main {
   }
 }
 
-@keyframes SlideIn {
+@keyframes EndRoll1 {
   0% {
-    transform: translateY(90%);
+    transform: translateY(33%);
   }
 
   100% {
     transform: translateY(-100%);
   }
+}
+
+@-webkit-keyframes EndRoll2 {
+  0% {
+    transform: translateY(66%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes EndRoll2 {
+  0% {
+    transform: translateY(66%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@-webkit-keyframes EndRoll3 {
+  0% {
+    transform: translateY(99%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes EndRoll3 {
+  0% {
+    transform: translateY(99%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@-webkit-keyframes EndRoll4 {
+  0% {
+    transform: translateY(132%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes EndRoll4 {
+  0% {
+    transform: translateY(132%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@-webkit-keyframes EndRoll5 {
+  0% {
+    transform: translateY(165%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes EndRoll5 {
+  0% {
+    transform: translateY(165%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.modal-contents .text-area .paused-true .movie {
+  -webkit-animation-play-state: paused !important;
+          animation-play-state: paused !important;
 }
 
 .modal-contents .modal-footer-area {
@@ -11868,11 +11948,6 @@ main {
   right: -20px;
 }
 
-.modal-contents .paused-true p {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-}
-
 .open-close {
   position: fixed;
 }
@@ -11921,5 +11996,86 @@ main {
 
 .open-close .btn--circle:hover i {
   line-height: 55px;
+}
+
+.setting-wrapper {
+  transform: translate3d(0, 0, 100);
+  position: relative;
+  height: 100vh;
+  background-color: rgba(112, 112, 112, 0.7);
+}
+
+.setting-inner {
+  transform: translate3d(0, 0, 110);
+  top: 0;
+  height: 100vh;
+  background-color: #FFFFFF;
+  position: absolute;
+  transition: all 0.7s ease;
+}
+
+@media (min-width: 1025px) {
+  .setting-inner {
+    width: 25%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .setting-inner {
+    width: 40%;
+  }
+}
+
+@media (max-width: 767px) {
+  .setting-inner {
+    width: 85%;
+  }
+}
+
+.setting-inner .setting-header {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid rgba(51, 51, 51, 0.125);
+  background-color: whitesmoke;
+}
+
+.setting-inner .setting-header .back-icon {
+  padding-right: 1.25rem;
+}
+
+.setting-inner .setting-header .back-icon i:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.setting-inner .list-group span {
+  color: #707070;
+}
+
+.setting-inner .list-group li i {
+  margin-right: 10px;
+}
+
+@media (min-width: 1025px) {
+  .setting-inner-false {
+    left: -25%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .setting-inner-false {
+    left: -40%;
+  }
+}
+
+@media (max-width: 767px) {
+  .setting-inner-false {
+    left: -85%;
+  }
+}
+
+.setting-inner-true {
+  left: 0%;
 }
 

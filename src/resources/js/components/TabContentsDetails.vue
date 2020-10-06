@@ -108,11 +108,8 @@ export default {
     },
     methods:{
         openMovie:function(topic){
-            console.log(this.category)
-            if(this.category!="contents-history"){
 
-                this.$store.commit('insertDB',{topic:this.topic,table:'history'})
-            }
+
             this.$store.commit('openCloseModal',{topicIndex:this.index,category:this.category.substr(9)})
 
         }

@@ -37,6 +37,12 @@
             <modal></modal>
             
         </div>
+        
+        <!-- 設定画面 -->
+        <div v-if="this.$store.state.settingOpenFlg" class="w-100 setting-wrapper" @click="openCloseSetting">
+        </div>
+        <setting-page></setting-page>
+
     </div>
 </template>
 
@@ -45,6 +51,7 @@ import HeaderForm from './components/HeaderForm.vue';
 import TabsList from './components/TabsList.vue';
 import OpenCloseIcon from './components/OpenCloseIcon';
 import Modal from './components/Modal';
+import SettingPage from './components/SettingPage';
 import { VueLoading } from 'vue-loading-template'
 
 export default {
@@ -54,6 +61,7 @@ export default {
         TabsList,
         OpenCloseIcon,
         Modal,
+        SettingPage,
         VueLoading
     },
 
@@ -92,9 +100,14 @@ export default {
         this.$store.commit('matchingFavorite')
         this.$store.commit('selectDB',{table:'history'})
         this.$store.commit('selectDB',{table:'favorite'})
-
+        this.$store.commit('matchingSetting')
         
     },
+    methods:{
+        openCloseSetting:function(){
+            this.$store.commit('openCloseSettingPage')
+        }
+    }
 
 
 }

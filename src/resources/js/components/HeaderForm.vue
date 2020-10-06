@@ -23,9 +23,9 @@
         </div>
 
         <!-- 設定ボタン -->
-        <div id="setting-icon" @click="deleteHistory">
+        <div id="setting-icon" @click="openSetting">
             <span>
-                <i class="far fa-trash-alt"></i>
+                <i class="fas fa-cog"></i>
             </span>
         </div>
 
@@ -55,14 +55,8 @@ export default {
         redo:function(){
             location.reload();
         },
-        deleteHistory:function(){
-
-            var message = "履歴を全て削除してもいいですか？";
-
-            if(confirm(message)){
-
-                this.$store.commit('deleteHistory')
-            }
+        openSetting:function(){
+            this.$store.commit('openCloseSettingPage')
         }
     }
 

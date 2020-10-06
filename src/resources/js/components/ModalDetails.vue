@@ -3,9 +3,13 @@
         <div class="modal-header-close">            
             <i class="fas fa-times txt_L" @click="closeMovie"></i>
         </div>
-        <div class="text-area w-100" :class="`paused-${paused}`" v-bind:style="pageStyle" @click="pausedMovie">
+        <div class="text-area w-100" v-bind:style="pageStyle" @click="pausedMovie">
             <!-- details -->
-            <p class="txt_M w-100 pl-3 pr-3">{{topic.text}}</p>
+            <div class="w-100 h-100 movie-area" :class="`paused-${paused}`">
+                
+                <movie-endroll v-if="topic.animation_type == 'end-roll'" :text="topic.text"></movie-endroll>
+            </div>
+            <!-- <p class="txt_M w-100 pl-3 pr-3">{{topic.text}}</p> -->
 
             <div v-if="paused" class="modal-play-area">
                 <i class="fas fa-play txt_L"></i>
@@ -39,16 +43,15 @@
 
 <script>
 import FavoriteButton from './FavoriteButton.vue';
+import MovieEndroll from './MovieEndroll';
 
 export default {
     components:{
-        FavoriteButton
+        FavoriteButton,
+        MovieEndroll
     },
     props:{
         surface:{
-            type:Number
-        },
-        showNum:{
             type:Number
         },
         topic:{
@@ -78,8 +81,11 @@ export default {
             var tz
             
             if(nextDeg == 0){
-                this.paused = false
-                this.isPlay=true
+                this.paused = !this.$store.state.autoPlay.movie
+                this.isPlay=this.$store.state.autoPlay.music
+
+
+                this.$store.commit('getHistoryTopics',this.topic)
             }
             else{
                 this.paused=true
@@ -143,13 +149,19 @@ export default {
         }
     },
     created:function() {
-
+        
         this.pageStyle.backgroundImage = "url('" + this.topic.image + "')"; 
 
     },
 
     methods:{
         closeMovie:function(){
+
+            //履歴追加
+            this.$store.state.modalHistTopics.forEach(topic => {
+                
+                this.$store.commit('insertDB',{topic:topic,table:'history'})
+            }) 
 
             //お気に入りモーダルにてお気に入り解除記事をDBに反映
             this.$store.state.modalFavDeleteIds.forEach(topicId => {
@@ -158,6 +170,7 @@ export default {
             });
 
             this.$store.state.modalFavDeleteIds=[]
+            this.$store.state.modalHistTopics=[]
 
             this.$store.commit('openCloseModal',{topicindex:"",category:""})
         },

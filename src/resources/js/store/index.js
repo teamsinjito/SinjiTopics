@@ -32,6 +32,7 @@ const store = new Vuex.Store({
                         url:"https://github.com/teamsinjito/SinjiChat",
                         bgm_created_name:"フリーBGM「さわやかデイズ」by ハップル",
                         bgm_name:"明るい",
+                        animation_type:"end-roll",
                         favorite:false
                     },
                     {
@@ -45,6 +46,7 @@ const store = new Vuex.Store({
                         url:"https://github.com/teamsinjito/SinjiTopics",
                         bgm_created_name:"フリーBGM素材「ADV GAmE FoAm」by えすにっく・かわひろ",
                         bgm_name:"懐かしい",
+                        animation_type:"end-roll",
                         favorite:false
                     },
                     {
@@ -58,6 +60,7 @@ const store = new Vuex.Store({
                         url:"https://github.com/teamsinjito",
                         bgm_created_name:"フリーBGM素材「ツインテール少女のお約束」by しんさんわーくす",
                         bgm_name:"コメディー",
+                        animation_type:"end-roll",
                         favorite:false
                     },
                     {
@@ -71,6 +74,7 @@ const store = new Vuex.Store({
                         url:"https://github.com/teamsinjito/SinjiChat",
                         bgm_created_name:"フリーBGM素材「Catch the future」by FLASH☆BEAT",
                         bgm_name:"サイバー",
+                        animation_type:"end-roll",
                         favorite:false
                     },
                     {
@@ -84,6 +88,7 @@ const store = new Vuex.Store({
                         url:"https://github.com/teamsinjito/SinjiTopics",
                         bgm_created_name:"フリーBGM素材「Caution Beat」by shimtone",
                         bgm_name:"緊張",
+                        animation_type:"end-roll",
                         favorite:false
                     },
                     {
@@ -92,11 +97,12 @@ const store = new Vuex.Store({
                         image:"",
                         image2:"",
                         thumbnail:"title-only",
-                        text:"◆パロディなのかと思わせるほど、微に入り細に入り東京の楽しみ方を紹介「東京 2021～22」には、従来の『地球の歩き方』を踏襲した手法が随所に出てくる。「日本人が国内旅行に使う本ですから、普通に考えればSuicaの使い方、電車の乗り方といったことはわかっています。それを海外版と同じように懇切丁寧に紹介したので、パロディかと思われた方もいるようでした。でも、エスカレーターひとつをとっても関西は右側に立ち、東京は左側に立ちますし、さらにエスカレーター協会さんによると、本当は左右どちらも歩いてはいけないことになっています。私自身、〝身近な街でも知らないことはあるんだなぁ〟と思いながら作っていきました」（斉藤麻理さん）確かに「山手線に乗り遅れても、数分に1回は来るからあきらめず次の電車を待とう」といった情報は、山手線に一度も乗ったことのない人は知り得ないものだ。そこに初の国内版ならではの切り口が加えられ、この本はほどよきハーモニーを奏でている。◆パロディなのかと思わせるほど、微に入り細に入り東京の楽しみ方を紹介「東京 2021～22」には、従来の『地球の歩き方』を踏襲した手法が随所に出てくる。「日本人が国内旅行に使う本ですから、普通に考えればSuicaの使い方、電車の乗り方といったことはわかっています。それを海外版と同じように懇切丁寧に紹介したので、パロディかと思われた方もいるようでした。でも、エスカレーターひとつをとっても関西は右側に立ち、東京は左側に立ちますし、さらにエスカレーター協会さんによると、本当は左右どちらも歩いてはいけないことになっています。私自身、〝身近な街でも知らないことはあるんだなぁ〟と思いながら作っていきました」（斉藤麻理さん）確かに「山手線に乗り遅れても、数分に1回は来るからあきらめず次の電車を待とう」といった情報は、山手線に一度も乗ったことのない人は知り得ないものだ。そこに初の国内版ならではの切り口が加えられ、この本はほどよきハーモニーを奏でている。",
+                        text:"◆パロディなのかと思わせるほど、微に入り細に入り東京の楽しみ方を紹介「東京 2021～22」には、従来の『地球の歩き方』を踏襲した手法が随所に出てくる。「日本人が国内旅行に使う本ですから、普通に考えればSuicaの使い方、電車の乗り方といったことはわかっています。それを海外版と同じように懇切丁寧に紹介したので、パロディかと思われた方もいるようでした。でも、エスカレーターひとつをとっても関西は右側に立ち、東京は左側に立ちますし、さらにエスカレーター協会さんによると、本当は左右どちらも歩いてはいけないことになっています。私自身、〝身近な街でも知らないことはあるんだなぁ〟と思いながら作っていきました」（斉藤麻理さん）確かに「山手線に乗り遅れても、数分に1回は来るからあきらめず次の電車を待とう」といった情報は、山手線に一度も乗ったことのない人は知り得ないものだ。そこに初の国内版ならではの切り口が加えられ、この本はほどよきハーモニーを奏でている。",
                         owner:"作者006",
                         url:"https://github.com/teamsinjito",
                         bgm_created_name:"フリーBGM素材「Evil Dance」by 伊藤ケイスケ",
                         bgm_name:"怒り",
+                        animation_type:"end-roll",
                         favorite:false
                     },
                     {
@@ -110,6 +116,7 @@ const store = new Vuex.Store({
                         url:"https://github.com/teamsinjito/SinjiChat",
                         bgm_created_name:"フリーBGM素材「雪の降り積もる夜に」by Ryo Lion",
                         bgm_name:"悲しい",
+                        animation_type:"end-roll",
                         favorite:false
                     },
                 ]
@@ -133,6 +140,7 @@ const store = new Vuex.Store({
                         url:"https://github.com/teamsinjito/SinjiTopics",
                         bgm_created_name:"フリーBGM素材「Crescent Moon」by shimtone",
                         bgm_name:"ファンタジー",
+                        animation_type:"end-roll",
                         favorite:false
                     },
                 ]
@@ -163,7 +171,13 @@ const store = new Vuex.Store({
         isModal:false, //モーダル表示フラグ
         modalTopicIndex:"", //モーダル表示用記事インデックス
         modalCategory:"",   //モーダル表示用カテゴリー
-        modalFavDeleteIds:[] //モーダルお気に入り削除記事ID
+        modalFavDeleteIds:[], //モーダルお気に入り削除記事ID
+        modalHistTopics:[], //履歴追加用
+        settingOpenFlg:false, //設定画面表示フラグ
+        autoPlay:{  //自動再生制御フラグ
+            movie:true,
+            music:true
+        }
     },
 
     mutations: {
@@ -179,8 +193,9 @@ const store = new Vuex.Store({
             //DB構築
             state.indexedDB = new Dexie("MyTopicsStorage");
             state.indexedDB.version(1).stores({
-                favorite:"&id,image,image2,owner,thumnail,title,text,url,bgm_created_name,bgm_name,favorite,created_at",
-                history:"&id,image,image2,owner,thumnail,title,text,url,bgm_created_name,bgm_name,favorite,created_at"
+                favorite:"&id,image,image2,owner,thumnail,title,text,url,bgm_created_name,bgm_name,animation_type,favorite,created_at",
+                history:"&id,image,image2,owner,thumnail,title,text,url,bgm_created_name,bgm_name,animation_type,favorite,created_at",
+                autoPlay:"name,value"
             });
         },
 
@@ -212,6 +227,7 @@ const store = new Vuex.Store({
                         url:obj.topic.url,
                         bgm_created_name:obj.topic.bgm_created_name,
                         bgm_name:obj.topic.bgm_name,
+                        animation_type:obj.topic.animation_type,
                         favorite:fav,
                         created_at:date.toLocaleString()
                     }).then(()=>{
@@ -299,9 +315,26 @@ const store = new Vuex.Store({
             })
         },
 
+        //お気に入り削除
+        deleteFavorite:function(state){
+            state.indexedDB.favorite.clear().then(()=>{
+                state.contents.favorite.topics=[]
+            })
+
+            for(var category in state.contents){
+                for(let i=0; i<state.contents[category].topics.length; i++){
+
+
+
+                        state.contents[category].topics[i].favorite=false;
+                    
+                }
+            }
+        },
+
         //モーダルウィンドウ表示、非表示
         openCloseModal:function(state,obj){
-            console.log(window.innerWidth + "px")
+
             state.isModal=!state.isModal
             state.modalTopicIndex=obj.topicIndex
             state.modalCategory=obj.category
@@ -314,6 +347,10 @@ const store = new Vuex.Store({
 
         },
 
+        getHistoryTopics:function (state,topic) {
+            state.modalHistTopics.push(topic)  
+        },
+
         //お気に入りモーダルにてお気に入り削除記事から除く
         spliceFavIdWithModal:function(state,id){
 
@@ -322,9 +359,30 @@ const store = new Vuex.Store({
                 state.modalFavDeleteIds.splice(index, 1);
             }
 
+        },
+
+        //設定画面オープン
+        openCloseSettingPage:function(state) {
+            state.settingOpenFlg=!state.settingOpenFlg
+        },
+
+        //自動再生制御設定
+        setAutoPlaySetting:function(state,obj){
+            state.autoPlay[obj.name]=obj.value
+            state.indexedDB.autoPlay.put({
+                name:obj.name,
+                value:obj.value
+
+            })
+        },
+
+        matchingSetting:function(state) {
+            state.indexedDB.autoPlay.each((res)=>{
+                
+                state.autoPlay[res.name]=res.value
+
+            })
         }
-
-
 
 
     },

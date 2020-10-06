@@ -1,0 +1,68 @@
+.setting-wrapper{
+    transform:translate3d(0,0,100);
+    position: relative;
+    height: 100vh;
+
+
+    background-color: rgba(112,112,112,0.7);
+    
+
+
+}
+.setting-inner{
+    transform:translate3d(0,0,110);
+    top: 0;
+    height: 100vh;
+    background-color: $white;
+    position: absolute;
+    transition: all 0.7s ease;
+    @include pc{
+        width: 25%;
+    }
+    @include pad{
+        width: 40%;
+    }
+    @include phone{
+        width: 85%;
+    }
+    .setting-header{
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 1.25rem;
+        border: 1px solid rgba(51, 51, 51, 0.125);
+        background-color: whitesmoke;
+        .back-icon{
+            padding-right: 1.25rem;
+            i:hover{
+                cursor: pointer;
+                opacity: .5;
+            }
+        }
+
+    }
+    .list-group{
+        span{
+            color: $gray;
+        }
+        li{
+            i{
+                margin-right: 10px;
+            }
+        }
+    }
+}
+.setting-inner-false{
+
+    @include pc{
+        left: -25%;
+    }
+    @include pad{
+        left: -40%;
+    }
+    @include phone{
+        left: -85%;
+    }
+}
+.setting-inner-true{
+    left: 0%;
+}
