@@ -16,7 +16,10 @@
 
         </v-touch>
 
-        <audio id="audio" :src="`../storage/music/${this.topics[tpi].bgm_name}.mp3`" autoplay loop>
+        <audio v-if="this.$store.state.autoPlay.music" id="audio" :src="`../storage/music/${this.topics[tpi].bgm_name}.mp3`" autoplay loop>
+            あなたのブラウザーは <code>audio</code>要素をサポートしていません。
+        </audio>
+        <audio v-else id="audio" :src="`../storage/music/${this.topics[tpi].bgm_name}.mp3`" loop>
             あなたのブラウザーは <code>audio</code>要素をサポートしていません。
         </audio>
 
@@ -48,6 +51,10 @@ export default {
             topicsCnt:this.$store.state.contents[this.$store.state.modalCategory].topics.length,
             tpi:this.$store.state.modalTopicIndex
         }
+    },
+    mounted:function(){
+        // console.log(document.getElementById('audio').volume)
+        document.getElementById('audio').volume=0.1;
     },
     computed:{
         nextBtnStyle(){

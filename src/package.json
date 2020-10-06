@@ -27,6 +27,7 @@
         "dexie": "^3.0.2",
         "image-to-base64": "^2.1.1",
         "vue-audio-visual": "^2.2.0",
+        "vue-js-toggle-button": "^1.3.3",
         "vue-loading-overlay": "^3.4.0",
         "vue-loading-template": "^1.3.2",
         "vue-touch": "^2.0.0-beta.4",

@@ -70,15 +70,17 @@
             left: 0;
             content: ' ';
         }
-        p{
-            text-align: center;
-            position: absolute;
-            word-break: keep-all;
-            overflow-wrap: break-word;
-            color:floralwhite;
-            line-height: 5;
-            animation: SlideIn 30s infinite;
-            animation-timing-function : linear
+        .movie-area{
+
+            .end-roll{
+                text-align: center;
+                position: absolute;
+                word-break: keep-all;
+                overflow-wrap: break-word;
+                color:floralwhite;
+                line-height: 5;
+
+            }
         }
         .modal-play-area{
             position: absolute;
@@ -94,13 +96,34 @@
             }
         }
         /* CSSアニメーションの設定 */
-        @keyframes SlideIn {
-            0% {
-            transform: translateY(90%);
+        
+        $i: 1;
+
+        @while $i <= 5 {
+            @keyframes EndRoll#{$i} {
+                0% {
+                transform: translateY(33% * $i);
+                }
+                100% {
+                transform: translateY(-100%);
+                }
             }
-            100% {
-            transform: translateY(-100%);
+            $i: $i + 1;
+        }
+        // @keyframes EndRoll {
+        //     0% {
+        //     transform: translateY(90%);
+        //     }
+        //     100% {
+        //     transform: translateY(-100%);
+        //     }
+        // }
+
+        .paused-true{
+            .movie{
+                animation-play-state: paused!important;
             }
+            
         }
     }
     .modal-footer-area{
@@ -183,10 +206,5 @@
     .next-button{
         right: -20px;
     }
-    .paused-true{
-        p{
-            animation-play-state: paused;
-        }
-        
-    }
+
 }

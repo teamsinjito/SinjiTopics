@@ -9,6 +9,9 @@ require('./bootstrap');
 window.Vue = require('vue');
 import store from "./store/index.js";
 import AudioVisual from 'vue-audio-visual'
+import ToggleButton from 'vue-js-toggle-button'
+
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -24,6 +27,7 @@ Vue.component('App', require('./App.vue').default);
 var VueTouch = require('vue-touch')
 Vue.use(VueTouch, {name: 'v-touch'})
 Vue.use(AudioVisual)
+Vue.use(ToggleButton)
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
