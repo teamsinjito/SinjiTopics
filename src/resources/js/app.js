@@ -28,6 +28,7 @@ var VueTouch = require('vue-touch')
 Vue.use(VueTouch, {name: 'v-touch'})
 Vue.use(AudioVisual)
 Vue.use(ToggleButton)
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

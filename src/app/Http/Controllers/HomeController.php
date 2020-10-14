@@ -24,8 +24,19 @@ class HomeController extends Controller
                 ->orderBy('id')
                 ->get();
 
+        //記事テーブルから全ての記事を取得
+        $topics=DB::table('topics as t')
+                ->join('tabs as tb','tb.id','t.tab_id')
+                ->join('thumbnails as tm','tm.id','t.thumbnail_gid')
+                ->join('animations as ani','ani.id','t.animation_gid')
+                ->join('music as m','m.id','t.music_gid')
+                ->select('t.id','tb.key','t.title','t.image','t.image2','tm.thumbnail_type','t.text','t.owner','t.url','m.bgm_created_name','m.bgm_name','ani.animation_type',DB::raw("false as favorite"))
+                ->orderBy('t.updated_at','desc')
+                ->get();
+
         return Response::json([
-            'tabs'=>$tabs
+            'tabs'=>$tabs,
+            'topics'=>$topics
         ]);
     }
 }

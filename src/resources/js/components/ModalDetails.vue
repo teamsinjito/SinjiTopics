@@ -8,6 +8,9 @@
             <div class="w-100 h-100 movie-area" :class="`paused-${paused}`">
                 
                 <movie-endroll v-if="topic.animation_type == 'end-roll'" :text="topic.text"></movie-endroll>
+                <movie-writer v-else-if="topic.animation_type == 'writer'"
+                :text="topic.text" :paused="paused"></movie-writer>
+
             </div>
             <!-- <p class="txt_M w-100 pl-3 pr-3">{{topic.text}}</p> -->
 
@@ -44,11 +47,13 @@
 <script>
 import FavoriteButton from './FavoriteButton.vue';
 import MovieEndroll from './MovieEndroll';
+import MovieWriter from './MovieWriter'
 
 export default {
     components:{
         FavoriteButton,
-        MovieEndroll
+        MovieEndroll,
+        MovieWriter
     },
     props:{
         surface:{
@@ -79,16 +84,20 @@ export default {
 
             var nextDeg =90* (this.surface - this.$store.state.modalTopicIndex) + this.deg
             var tz
-            
+            // console.log(this.$store.state.modalTopicIndex)
+            // console.log(this.surface)
+
             if(nextDeg == 0){
                 this.paused = !this.$store.state.autoPlay.movie
                 this.isPlay=this.$store.state.autoPlay.music
 
 
                 this.$store.commit('getHistoryTopics',this.topic)
+                
             }
             else{
                 this.paused=true
+
             }
 
             if(nextDeg == 0 || nextDeg == 90 || nextDeg == -90){
