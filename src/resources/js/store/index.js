@@ -17,7 +17,9 @@ const store = new Vuex.Store({
         //     {key:"contents-history",name:"履歴",default:""},
         //     {key:"contents-favorite",name:"お気に入り",default:""}   
         // ],
-        contents:{  //記事（AWSテスト用）
+
+        contents:{},　//記事
+        contents2:{  //記事（AWSテスト用）
             domestic:{
                 key:"contents-domestic",
                 topics:[
@@ -186,15 +188,30 @@ const store = new Vuex.Store({
         setTabs:function(state,val){
             state.tabs=val
 
+            for(let i = 0; i<val.length; i++){
+
+                Vue.set(state.contents,val[i].key.substr(9),{key:val[i].key,topics:[]})
+            }
+
         },
+
+        //取得してきた記事をセット
+        setTopics:function(state,vals){
+
+            for(let i = 0; i<vals.length; i++){
+                state.contents[vals[i].key.substr(9)].topics.push(vals[i])
+            }
+
+        },
+
         //indexedDB構築
         setIndexedDB:function(state){
 
             //DB構築
             state.indexedDB = new Dexie("MyTopicsStorage");
             state.indexedDB.version(1).stores({
-                favorite:"&id,image,image2,owner,thumnail,title,text,url,bgm_created_name,bgm_name,animation_type,favorite,created_at",
-                history:"&id,image,image2,owner,thumnail,title,text,url,bgm_created_name,bgm_name,animation_type,favorite,created_at",
+                favorite:"&id,image,image2,owner,thumnail_type,title,text,url,bgm_created_name,bgm_name,animation_type,favorite,created_at",
+                history:"&id,image,image2,owner,thumnail_type,title,text,url,bgm_created_name,bgm_name,animation_type,favorite,created_at",
                 autoPlay:"name,value"
             });
         },
@@ -221,7 +238,7 @@ const store = new Vuex.Store({
                         image:obj.topic.image,
                         image2:obj.topic.image2,
                         owner:obj.topic.owner,
-                        thumbnail:obj.topic.thumbnail,
+                        thumbnail_type:obj.topic.thumbnail_type,
                         title:obj.topic.title,
                         text:obj.topic.text,
                         url:obj.topic.url,

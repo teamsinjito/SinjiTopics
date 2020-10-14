@@ -1,7 +1,7 @@
 <template>
         
     <!-- テンプレート① standard -->
-    <div v-if="topic.thumbnail == 'standard' && topic.title.includes(filter)" class="card standard-style" style="grid-row: span 2; grid-column: span 1;">
+    <div v-if="topic.thumbnail_type == 'standard' && topic.title.includes(filter)" class="card standard-style" style="grid-row: span 2; grid-column: span 1;">
         <!-- 画像イメージ -->
         <div class="img-wrapper">
             <img  class="card-img-top" :src="topic.image">
@@ -21,7 +21,7 @@
     </div>
 
     <!-- テンプレート② title-only -->
-    <div v-else-if="topic.thumbnail == 'title-only' && topic.title.includes(filter)" class="card title-only-style" style="grid-row: span 1; grid-column: span 1;">
+    <div v-else-if="topic.thumbnail_type == 'title-only' && topic.title.includes(filter)" class="card title-only-style" style="grid-row: span 1; grid-column: span 1;">
 
         <!-- 本文 -->
         <div class="card-body">
@@ -37,7 +37,7 @@
     </div>
 
     <!-- テンプレート③ h-large -->
-    <div v-else-if="topic.thumbnail == 'h-large' && topic.title.includes(filter)" class="card h-large-style" style="grid-row: span 3; grid-column: span 1;">
+    <div v-else-if="topic.thumbnail_type == 'h-large' && topic.title.includes(filter)" class="card h-large-style" style="grid-row: span 3; grid-column: span 1;">
         <!-- 画像イメージ -->
         <div class="img-wrapper">
             <img  class="card-img-top" :src="topic.image">
@@ -57,7 +57,7 @@
     </div>
 
     <!-- テンプレート④ w-large-only -->
-    <div v-else-if="topic.thumbnail == 'w-large' && topic.title.includes(filter)" class="card w-large-style" style="grid-row: span 2; grid-column: span 2;">
+    <div v-else-if="topic.thumbnail_type == 'w-large' && topic.title.includes(filter)" class="card w-large-style" style="grid-row: span 2; grid-column: span 2;">
 
         <!-- 画像イメージ -->
         <div class="img-wrapper">

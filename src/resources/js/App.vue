@@ -19,7 +19,7 @@
                 <img src="img/logo.png" alt="SinjiTopics">
             </div>
 
-        <!-- 記事一覧 -->
+            <!-- 記事一覧 -->
             <main :class="{'open-category':openTabsListFlg}">
                 <!-- タブ項目 -->
                 <tabs-list :active-tab="activeTab" :filter="inputTxt" @update="activeTab = $event" @updateFlg="openTabsListFlg = $event"></tabs-list>
@@ -87,20 +87,25 @@ export default {
 
 
                     this.$store.commit('setTabs',response.data.tabs)
+                    
 
                 }
+                if(response.data.topics.length){
 
+                    this.$store.commit('setTopics',response.data.topics)
+                }
+                this.$store.commit('setIndexedDB')
+                this.$store.commit('matchingFavorite')
+                this.$store.commit('selectDB',{table:'history'})
+                this.$store.commit('selectDB',{table:'favorite'})
+                this.$store.commit('matchingSetting')
                 
             })
             .catch((err)=>{
                 console.log(err)
             })
 
-        this.$store.commit('setIndexedDB')
-        this.$store.commit('matchingFavorite')
-        this.$store.commit('selectDB',{table:'history'})
-        this.$store.commit('selectDB',{table:'favorite'})
-        this.$store.commit('matchingSetting')
+
         
     },
     methods:{

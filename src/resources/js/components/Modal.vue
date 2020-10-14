@@ -2,7 +2,7 @@
     <div class="container h-100 p-0 modal-contents">
         
 
-        <v-touch v-on:swiperight="prePage" v-on:swipeleft="nextPage" class="cube w-100 h-100">
+        <v-touch v-on:swiperight="prePageSwipe" v-on:swipeleft="nextPageSwipe" class="cube w-100 h-100">
             
                 <modal-details 
                     :surface="index" 
@@ -100,6 +100,28 @@ export default {
 
             }
 
+            
+        },
+        prePageSwipe:function(){
+            if(window.innerWidth <= 767){
+                if(this.tpi!= 0){
+                    
+                    this.deg=this.deg+90
+                    this.tpi=this.tpi-1
+    
+                }
+
+            }
+        },
+        nextPageSwipe:function(){
+            if(window.innerWidth <= 767){
+                if(this.tpi != this.topicsCnt - 1){
+
+                    this.deg=this.deg-90
+                    this.tpi=this.tpi+1
+
+                }
+            }
             
         },
 
