@@ -35,7 +35,7 @@ class TopicTableSeeder extends Seeder
 
         ];
         $topics=[
-            ["topics001DB",1,"タイトル001テスト",$texts[0],"作者001テスト","https://github.com/teamsinjito/SinjiChat",$images[0],$images[0],1,2,1],
+            ["topics001DB",1,"タイトル001テスト",$texts[0],"作者001テスト","https://github.com/teamsinjito/SinjiChat",$images[0],$images[0],3,2,1],
             ["topics002DB",1,"タイトル002テスト",$texts[1],"作者002テスト","https://github.com/teamsinjito/SinjiTopics",$images[1],$images[1],3,1,2],
             ["topics003DB",1,"タイトル003テスト",$texts[2],"作者003テスト","https://github.com/teamsinjito/SinjiTopics",$images[2],$images[2],1,1,3],
             ["topics004DB",1,"タイトル004テスト",$texts[3],"作者004テスト","https://github.com/teamsinjito/SinjiTopics",$images[3],$images[3],2,1,4],
