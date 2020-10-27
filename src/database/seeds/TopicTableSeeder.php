@@ -35,14 +35,14 @@ class TopicTableSeeder extends Seeder
 
         ];
         $topics=[
-            ["topics001DB",1,"タイトル001テスト",$texts[0],"作者001テスト","https://github.com/teamsinjito/SinjiChat",$images[0],$images[0],3,2,1],
-            ["topics002DB",1,"タイトル002テスト",$texts[1],"作者002テスト","https://github.com/teamsinjito/SinjiTopics",$images[1],$images[1],3,1,2],
-            ["topics003DB",1,"タイトル003テスト",$texts[2],"作者003テスト","https://github.com/teamsinjito/SinjiTopics",$images[2],$images[2],1,1,3],
-            ["topics004DB",1,"タイトル004テスト",$texts[3],"作者004テスト","https://github.com/teamsinjito/SinjiTopics",$images[3],$images[3],2,1,4],
-            ["topics005DB",1,"タイトル005テスト",$texts[4],"作者005テスト","https://github.com/teamsinjito/SinjiTopics",$images[4],$images[4],2,1,5],
-            ["topics006DB",1,"タイトル006テスト",$texts[5],"作者006テスト","https://github.com/teamsinjito/SinjiTopics","","",4,1,6],
-            ["topics007DB",1,"タイトル007テスト",$texts[6],"作者007テスト","https://github.com/teamsinjito/SinjiTopics",$images[5],$images[5],1,1,6],
-            ["topics008DB",2,"タイトル008テスト",$texts[7],"作者008テスト","https://github.com/teamsinjito/SinjiTopics","","",4,1,7],
+            ["topics001DB",1,"タイトル001テスト",$texts[0],"作者001テスト","https://github.com/teamsinjito/SinjiChat",$images[0],3,2,1],
+            ["topics002DB",1,"タイトル002テスト",$texts[1],"作者002テスト","https://github.com/teamsinjito/SinjiTopics",$images[1],3,1,2],
+            ["topics003DB",1,"タイトル003テスト",$texts[2],"作者003テスト","https://github.com/teamsinjito/SinjiTopics",$images[2],1,1,3],
+            ["topics004DB",1,"タイトル004テスト",$texts[3],"作者004テスト","https://github.com/teamsinjito/SinjiTopics",$images[3],2,1,4],
+            ["topics005DB",1,"タイトル005テスト",$texts[4],"作者005テスト","https://github.com/teamsinjito/SinjiTopics",$images[4],2,1,5],
+            ["topics006DB",1,"タイトル006テスト",$texts[5],"作者006テスト","https://github.com/teamsinjito/SinjiTopics","",4,1,6],
+            ["topics007DB",1,"タイトル007テスト",$texts[6],"作者007テスト","https://github.com/teamsinjito/SinjiTopics",$images[5],1,1,6],
+            ["topics008DB",2,"タイトル008テスト",$texts[7],"作者008テスト","https://github.com/teamsinjito/SinjiTopics","",4,1,7],
         ];
 
         foreach($topics as $topic){
@@ -54,10 +54,9 @@ class TopicTableSeeder extends Seeder
                 'owner'=>$topic[4],
                 'url'=>$topic[5],
                 'image'=>$topic[6],
-                'image2'=>$topic[7],
-                'thumbnail_gid'=>$topic[8],
-                'animation_gid'=>$topic[9],
-                'music_gid'=>$topic[10],
+                'thumbnail_gid'=>$topic[7],
+                'animation_gid'=>$topic[8],
+                'music_gid'=>$topic[9],
             ]);
         }
     }

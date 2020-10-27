@@ -20,7 +20,7 @@ export default {
 
         //お気に入り追加
         addFavorite:function(){
-            console.log(this.topic)
+
             this.$store.commit('updateFavoriteFlg',{id:this.topic.id,val:true})
 
             if((this.$store.state.isModal && this.$store.state.modalCategory =='favorite')){
