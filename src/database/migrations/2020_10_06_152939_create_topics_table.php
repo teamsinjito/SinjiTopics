@@ -22,7 +22,6 @@ class CreateTopicsTable extends Migration
             $table->string('owner',100);
             $table->text('url');
             $table->text('image');
-            $table->text('image2');
             $table->unsignedBigInteger('thumbnail_gid')->nullable();
             $table->unsignedBigInteger('animation_gid')->nullable();
             $table->unsignedBigInteger('music_gid')->nullable();
