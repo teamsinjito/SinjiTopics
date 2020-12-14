@@ -1993,7 +1993,8 @@ __webpack_require__.r(__webpack_exports__);
     var _this = this;
 
     axios.get('/get/index').then(function (response) {
-      //タブ一覧取得
+      console.log(response.data.topics); //タブ一覧取得
+
       if (response.data.tabs.length) {
         _this.$store.commit('setTabs', response.data.tabs);
       }
@@ -2714,6 +2715,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _FavoriteButton_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FavoriteButton.vue */ "./resources/js/components/FavoriteButton.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -50547,7 +50561,11 @@ var render = function() {
             "div",
             { staticClass: "card-bottom pl-3 pr-3" },
             [
-              _c("small", [
+              _c("small", { staticClass: "txt_XXS" }, [
+                _c("span", [_vm._v(_vm._s(_vm.topic.upload))]),
+                _vm._v(" "),
+                _c("br"),
+                _vm._v(" "),
                 _c(
                   "a",
                   {
@@ -50596,7 +50614,11 @@ var render = function() {
             "div",
             { staticClass: "card-bottom pl-3 pr-3" },
             [
-              _c("small", [
+              _c("small", { staticClass: "txt_XXS" }, [
+                _c("span", [_vm._v(_vm._s(_vm.topic.upload))]),
+                _vm._v(" "),
+                _c("br"),
+                _vm._v(" "),
                 _c(
                   "a",
                   {
@@ -50652,7 +50674,11 @@ var render = function() {
             "div",
             { staticClass: "card-bottom pl-3 pr-3" },
             [
-              _c("small", [
+              _c("small", { staticClass: "txt_XXS" }, [
+                _c("span", [_vm._v(_vm._s(_vm.topic.upload))]),
+                _vm._v(" "),
+                _c("br"),
+                _vm._v(" "),
                 _c(
                   "a",
                   {
@@ -50707,7 +50733,11 @@ var render = function() {
               "div",
               { staticClass: "card-bottom" },
               [
-                _c("small", [
+                _c("small", { staticClass: "txt_XXS" }, [
+                  _c("span", [_vm._v(_vm._s(_vm.topic.upload))]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
                   _c(
                     "a",
                     {
@@ -68406,8 +68436,8 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
       //DB構築
       state.indexedDB = new dexie__WEBPACK_IMPORTED_MODULE_2__["default"]("MyTopicsStorage");
       state.indexedDB.version(1).stores({
-        favorite: "&id,image,owner,thumnail_type,title,text,url,bgm_created_name,bgm_name,animation_type,favorite,created_at",
-        history: "&id,image,owner,thumnail_type,title,text,url,bgm_created_name,bgm_name,animation_type,favorite,created_at",
+        favorite: "&id,image,owner,thumnail_type,title,text,url,bgm_created_name,bgm_name,animation_type,favorite,upload,created_at",
+        history: "&id,image,owner,thumnail_type,title,text,url,bgm_created_name,bgm_name,animation_type,favorite,upload,created_at",
         autoPlay: "name,value"
       });
     },
@@ -68440,6 +68470,7 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
             bgm_name: obj.topic.bgm_name,
             animation_type: obj.topic.animation_type,
             favorite: fav,
+            upload: obj.topic.upload,
             created_at: date.toLocaleString()
           }).then(function () {
             _this.commit('selectDB', {

@@ -81,7 +81,7 @@ export default {
         axios
             .get('/get/index')
             .then((response)=>{
-
+                console.log(response.data.topics)
                 //タブ一覧取得
                 if(response.data.tabs.length){
 
@@ -91,7 +91,7 @@ export default {
 
                 }
                 if(response.data.topics.length){
-
+                    
                     this.$store.commit('setTopics',response.data.topics)
                 }
                 this.$store.commit('setIndexedDB')
