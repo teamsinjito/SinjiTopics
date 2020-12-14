@@ -34,7 +34,10 @@
 
         <!-- 出典およびお気に入りボタン -->
         <div class="card-bottom pl-3 pr-3">
-            <small><a :href="topic.url" target="_blank" rel="noopener noreferrer">{{topic.owner}}</a></small>
+            <small class="txt_XXS">                
+                <span>{{topic.upload}}</span>
+                <br>
+                <a :href="topic.url" target="_blank" rel="noopener noreferrer">{{topic.owner}}</a></small>
             <favorite-button :topic="topic"></favorite-button>
         </div>
 
@@ -54,7 +57,10 @@
 
         <!-- 出典およびお気に入りボタン -->
         <div class="card-bottom pl-3 pr-3">
-            <small><a :href="topic.url" target="_blank" rel="noopener noreferrer">{{topic.owner}}</a></small>
+            <small class="txt_XXS">                
+                <span>{{topic.upload}}</span>
+                <br>
+                <a :href="topic.url" target="_blank" rel="noopener noreferrer">{{topic.owner}}</a></small>
             <favorite-button :topic="topic"></favorite-button>
         </div>
 
@@ -76,7 +82,10 @@
 
             <!-- 出典およびお気に入りボタン -->
             <div class="card-bottom">
-                <small><a :href="topic.url" target="_blank" rel="noopener noreferrer">{{topic.owner}}</a></small>
+                <small class="txt_XXS">                
+                    <span>{{topic.upload}}</span>
+                    <br>
+                    <a :href="topic.url" target="_blank" rel="noopener noreferrer">{{topic.owner}}</a></small>
                 <favorite-button :topic="topic"></favorite-button>
             </div>
 

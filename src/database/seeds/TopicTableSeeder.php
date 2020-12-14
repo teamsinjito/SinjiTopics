@@ -57,6 +57,7 @@ class TopicTableSeeder extends Seeder
                 'thumbnail_gid'=>$topic[7],
                 'animation_gid'=>$topic[8],
                 'music_gid'=>$topic[9],
+                'upload'=>"12月14日 16:12 配信"
             ]);
         }
     }
