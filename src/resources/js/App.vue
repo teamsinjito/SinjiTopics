@@ -81,7 +81,6 @@ export default {
         axios
             .get('/get/index')
             .then((response)=>{
-                console.log(response.data.topics)
                 //タブ一覧取得
                 if(response.data.tabs.length){
 

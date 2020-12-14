@@ -1993,8 +1993,7 @@ __webpack_require__.r(__webpack_exports__);
     var _this = this;
 
     axios.get('/get/index').then(function (response) {
-      console.log(response.data.topics); //タブ一覧取得
-
+      //タブ一覧取得
       if (response.data.tabs.length) {
         _this.$store.commit('setTabs', response.data.tabs);
       }
