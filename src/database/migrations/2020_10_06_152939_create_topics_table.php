@@ -25,6 +25,7 @@ class CreateTopicsTable extends Migration
             $table->unsignedBigInteger('thumbnail_gid')->nullable();
             $table->unsignedBigInteger('animation_gid')->nullable();
             $table->unsignedBigInteger('music_gid')->nullable();
+            $table->string('upload',40);
             $table->timestamps();
         });
 
