@@ -49,8 +49,8 @@ const store = new Vuex.Store({
             //DB構築
             state.indexedDB = new Dexie("MyTopicsStorage");
             state.indexedDB.version(1).stores({
-                favorite:"&id,image,owner,thumnail_type,title,text,url,bgm_created_name,bgm_name,animation_type,favorite,created_at",
-                history:"&id,image,owner,thumnail_type,title,text,url,bgm_created_name,bgm_name,animation_type,favorite,created_at",
+                favorite:"&id,image,owner,thumnail_type,title,text,url,bgm_created_name,bgm_name,animation_type,favorite,upload,created_at",
+                history:"&id,image,owner,thumnail_type,title,text,url,bgm_created_name,bgm_name,animation_type,favorite,upload,created_at",
                 autoPlay:"name,value"
             });
         },
@@ -84,6 +84,7 @@ const store = new Vuex.Store({
                         bgm_name:obj.topic.bgm_name,
                         animation_type:obj.topic.animation_type,
                         favorite:fav,
+                        upload:obj.topic.upload,
                         created_at:date.toLocaleString()
                     }).then(()=>{
 
