@@ -33,18 +33,16 @@ class TabTableSeeder extends Seeder
             ["contents-favorite","お気に入り",""]
         ];
         $musics=[
-            ["フリーBGM「さわやかデイズ」by ハップル","明るい"],
-            ["フリーBGM素材「ADV GAmE FoAm」by えすにっく・かわひろ","懐かしい"],
-            ["フリーBGM素材「ツインテール少女のお約束」by しんさんわーくす","コメディー"],
-            ["フリーBGM素材「Evil Dance」by 伊藤ケイスケ","怒り"],
-            ["フリーBGM素材「雪の降り積もる夜に」by Ryo Lion","悲しい"],
-            ["フリーBGM素材「Crescent Moon」by shimtone","ファンタジー"],
-            ["フリーBGM素材「夜の秋桜」by しんさんわーくす","おしゃれ"],
-            ["フリーBGM素材「悩む昼ごはん」by いまたく","日常"],
-            ["フリーBGM素材「Catch the future」by FLASH☆BEAT","サイバー"],
-            ["フリーBGM素材「Sulpiride」by Anonyment","暗い"],
-            ["フリーBGM素材「Caution Beat」by shimtone","緊張"],
-            ["フリーBGM素材「休日どこ行こっか?」by しんさんわーくす","希望"],
+
+            ["フリーBGM「シャイニングスター」by 森田交一","シャイニングスター"],
+            ["フリーBGM「タイフーンパレード」by 龍崎一","タイフーンパレード"],
+            ["フリーBGM「Success!」by 龍崎一","Success!"],
+            ["フリーBGM素材「ランプ」by カワサキヤスヒロ","ランプ"],
+            ["フリーBGM素材「フタツノココロ」by t.tam","フタツノココロ"],
+            ["フリーBGM「ホットミルク」by カワサキヤスヒロ","ホットミルク"],
+            ["フリーBGM「Where you are」by 森田交一","Where you are"],
+            ["フリーBGM「Cry again」by 森田交一","Cry again"],
+            ["フリーBGM「ながれぼし」by もっぴーさうんど","ながれぼし"]
         ];
         $thubmnails=[
             ["standard"],
