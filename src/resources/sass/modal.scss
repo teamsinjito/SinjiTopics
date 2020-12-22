@@ -96,17 +96,20 @@
             }
         }
         /* CSSアニメーションの設定 */
-        @keyframes EndRoll {
-            0% {
-                top:100%;
-            }
-            100% {
-                top: -500%;
-            }
-        }
-        // $i: 1;
+        @keyframes EndRoll1 {0% {top:100%;}100% {top: -800%;}}
+        @keyframes EndRoll2 {0% {top:100%;}100% {top: -700%;}}
+        @keyframes EndRoll3 {0% {top:100%;}100% {top: -600%;}}
+        @keyframes EndRoll4 {0% {top:100%;}100% {top: -500%;}}
+        @keyframes EndRoll5 {0% {top:100%;}100% {top: -400%;}}
+        @keyframes EndRoll6 {0% {top:100%;}100% {top: -350%;}}
+        @keyframes EndRoll7 {0% {top:100%;}100% {top: -300%;}}
+        @keyframes EndRoll8 {0% {top:100%;}100% {top: -200%;}}
+        @keyframes EndRoll9 {0% {top:100%;}100% {top: -150%;}}
+        @keyframes EndRoll10 {0% {top:100%;}100% {top: -100%;}}
+        @keyframes EndRoll11 {0% {top:100%;}100% {top: -50%;}}
+        //$i: 1;
 
-        // @while $i <= 5 {
+        // @while $i <= 11 {
         //     @keyframes EndRoll#{$i} {
         //         0% {
         //         transform: translateY(33% * $i);
