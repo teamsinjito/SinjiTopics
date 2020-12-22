@@ -7,7 +7,7 @@ http://13.230.254.65/#
 PHP7.4,HTML5,SCSS,JavaScript
 
 フレームワーク<br>
-Laravel 5.8
+Laravel 5.8 <br>
 Vue.js 
 
 データベース<br>
