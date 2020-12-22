@@ -2501,29 +2501,30 @@ __webpack_require__.r(__webpack_exports__);
     endRollSpeed: function endRollSpeed() {
       var ln = this.text.length;
       var ani = "";
+      console.log(ln);
 
       if (ln >= 2000) {
-        ani = "EndRoll1 80s infinite";
+        ani = "EndRoll1 90s infinite";
       } else if (ln >= 1800) {
-        ani = "EndRoll2 70s infinite";
+        ani = "EndRoll2 80s infinite";
       } else if (ln >= 1400) {
-        ani = "EndRoll3 70s infinite";
+        ani = "EndRoll3 80s infinite";
       } else if (ln >= 1200) {
-        ani = "EndRoll4 60s infinite";
+        ani = "EndRoll4 70s infinite";
       } else if (ln >= 1000) {
-        ani = "EndRoll5 50s infinite";
+        ani = "EndRoll5 60s infinite";
       } else if (ln >= 800) {
-        ani = "EndRoll6 50s infinite";
+        ani = "EndRoll6 60s infinite";
       } else if (ln >= 600) {
-        ani = "EndRoll7 40s infinite";
+        ani = "EndRoll7 50s infinite";
       } else if (ln >= 400) {
-        ani = "EndRoll8 40s infinite";
+        ani = "EndRoll8 50s infinite";
       } else if (ln >= 200) {
-        ani = "EndRoll9 30s infinite";
+        ani = "EndRoll9 40s infinite";
       } else if (ln >= 100) {
-        ani = "EndRoll10 30s infinite";
+        ani = "EndRoll10 40s infinite";
       } else {
-        ani = "EndRoll11 20s infinite";
+        ani = "EndRoll11 30s infinite";
       }
 
       return {
