@@ -11715,103 +11715,23 @@ main {
   opacity: 0.5;
 }
 
-@-webkit-keyframes EndRoll1 {
+@-webkit-keyframes EndRoll {
   0% {
-    transform: translateY(33%);
+    top: 100%;
   }
 
   100% {
-    transform: translateY(-100%);
+    top: -500%;
   }
 }
 
-@keyframes EndRoll1 {
+@keyframes EndRoll {
   0% {
-    transform: translateY(33%);
+    top: 100%;
   }
 
   100% {
-    transform: translateY(-100%);
-  }
-}
-
-@-webkit-keyframes EndRoll2 {
-  0% {
-    transform: translateY(66%);
-  }
-
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
-@keyframes EndRoll2 {
-  0% {
-    transform: translateY(66%);
-  }
-
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
-@-webkit-keyframes EndRoll3 {
-  0% {
-    transform: translateY(99%);
-  }
-
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
-@keyframes EndRoll3 {
-  0% {
-    transform: translateY(99%);
-  }
-
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
-@-webkit-keyframes EndRoll4 {
-  0% {
-    transform: translateY(132%);
-  }
-
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
-@keyframes EndRoll4 {
-  0% {
-    transform: translateY(132%);
-  }
-
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
-@-webkit-keyframes EndRoll5 {
-  0% {
-    transform: translateY(165%);
-  }
-
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
-@keyframes EndRoll5 {
-  0% {
-    transform: translateY(165%);
-  }
-
-  100% {
-    transform: translateY(-100%);
+    top: -500%;
   }
 }
 

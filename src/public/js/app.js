@@ -2500,19 +2500,17 @@ __webpack_require__.r(__webpack_exports__);
   computed: {
     endRollSpeed: function endRollSpeed() {
       var ln = this.text.length;
-      var ani;
-
-      if (ln >= 1200) {
-        ani = "EndRoll1 60s infinite";
-      } else if (ln >= 750) {
-        ani = "EndRoll2 45s infinite";
-      } else if (ln >= 300) {
-        ani = "EndRoll3 30s infinite";
-      } else if (ln >= 200) {
-        ani = "EndRoll4 25s infinite";
-      } else {
-        ani = "EndRoll5 15s infinite";
-      }
+      var ani = "EndRoll 60s infinite"; // if(ln>=1200){
+      //     ani ="EndRoll1 60s infinite"
+      // }else if(ln>=750){
+      //     ani ="EndRoll2 45s infinite"
+      // }else if(ln>=300){  
+      //     ani ="EndRoll3 30s infinite"
+      // }else if(ln>=200){
+      //     ani="EndRoll4 25s infinite"
+      // }else{
+      //     ani="EndRoll5 15s infinite"
+      // }
 
       return {
         animation: ani,
@@ -50198,7 +50196,7 @@ var render = function() {
       ),
       _vm._v(" "),
       _c("div", { staticClass: "modal-footer-area w-100" }, [
-        _c("p", { staticClass: "txt_M topic-title w-100 m-0 ml-3" }, [
+        _c("p", { staticClass: "txt_M topic-title w-100 m-0 pl-3 pr-3" }, [
           _vm._v("\n            " + _vm._s(_vm.topic.title) + "\n        ")
         ]),
         _vm._v(" "),
