@@ -11721,7 +11721,7 @@ main {
   }
 
   100% {
-    top: -800%;
+    top: -900%;
   }
 }
 
@@ -11731,7 +11731,7 @@ main {
   }
 
   100% {
-    top: -800%;
+    top: -900%;
   }
 }
 
@@ -11741,7 +11741,7 @@ main {
   }
 
   100% {
-    top: -700%;
+    top: -800%;
   }
 }
 
@@ -11751,7 +11751,7 @@ main {
   }
 
   100% {
-    top: -700%;
+    top: -800%;
   }
 }
 
@@ -11761,7 +11761,7 @@ main {
   }
 
   100% {
-    top: -600%;
+    top: -700%;
   }
 }
 
@@ -11771,7 +11771,7 @@ main {
   }
 
   100% {
-    top: -600%;
+    top: -700%;
   }
 }
 
@@ -11781,7 +11781,7 @@ main {
   }
 
   100% {
-    top: -500%;
+    top: -600%;
   }
 }
 
@@ -11791,7 +11791,7 @@ main {
   }
 
   100% {
-    top: -500%;
+    top: -600%;
   }
 }
 
@@ -11801,7 +11801,7 @@ main {
   }
 
   100% {
-    top: -400%;
+    top: -500%;
   }
 }
 
@@ -11811,7 +11811,7 @@ main {
   }
 
   100% {
-    top: -400%;
+    top: -500%;
   }
 }
 
@@ -11821,7 +11821,7 @@ main {
   }
 
   100% {
-    top: -350%;
+    top: -450%;
   }
 }
 
@@ -11831,7 +11831,7 @@ main {
   }
 
   100% {
-    top: -350%;
+    top: -450%;
   }
 }
 
@@ -11841,7 +11841,7 @@ main {
   }
 
   100% {
-    top: -300%;
+    top: -400%;
   }
 }
 
@@ -11851,7 +11851,7 @@ main {
   }
 
   100% {
-    top: -300%;
+    top: -400%;
   }
 }
 
@@ -11861,7 +11861,7 @@ main {
   }
 
   100% {
-    top: -200%;
+    top: -300%;
   }
 }
 
@@ -11871,7 +11871,7 @@ main {
   }
 
   100% {
-    top: -200%;
+    top: -300%;
   }
 }
 
@@ -11881,7 +11881,7 @@ main {
   }
 
   100% {
-    top: -150%;
+    top: -250%;
   }
 }
 
@@ -11891,7 +11891,7 @@ main {
   }
 
   100% {
-    top: -150%;
+    top: -250%;
   }
 }
 
@@ -11901,7 +11901,7 @@ main {
   }
 
   100% {
-    top: -100%;
+    top: -200%;
   }
 }
 
@@ -11911,7 +11911,7 @@ main {
   }
 
   100% {
-    top: -100%;
+    top: -200%;
   }
 }
 
@@ -11921,7 +11921,7 @@ main {
   }
 
   100% {
-    top: -50%;
+    top: -100%;
   }
 }
 
@@ -11931,8 +11931,229 @@ main {
   }
 
   100% {
-    top: -50%;
+    top: -100%;
   }
+}
+
+@media (max-width: 767px) {
+@-webkit-keyframes EndRoll1 {
+    0% {
+      top: 100%;
+    }
+
+    100% {
+      top: -1000%;
+    }
+}
+@keyframes EndRoll1 {
+    0% {
+      top: 100%;
+    }
+
+    100% {
+      top: -1000%;
+    }
+}
+
+@-webkit-keyframes EndRoll2 {
+    0% {
+      top: 100%;
+    }
+
+    100% {
+      top: -900%;
+    }
+}
+
+@keyframes EndRoll2 {
+    0% {
+      top: 100%;
+    }
+
+    100% {
+      top: -900%;
+    }
+}
+
+@-webkit-keyframes EndRoll3 {
+    0% {
+      top: 100%;
+    }
+
+    100% {
+      top: -800%;
+    }
+}
+
+@keyframes EndRoll3 {
+    0% {
+      top: 100%;
+    }
+
+    100% {
+      top: -800%;
+    }
+}
+
+@-webkit-keyframes EndRoll4 {
+    0% {
+      top: 100%;
+    }
+
+    100% {
+      top: -700%;
+    }
+}
+
+@keyframes EndRoll4 {
+    0% {
+      top: 100%;
+    }
+
+    100% {
+      top: -700%;
+    }
+}
+
+@-webkit-keyframes EndRoll5 {
+    0% {
+      top: 100%;
+    }
+
+    100% {
+      top: -600%;
+    }
+}
+
+@keyframes EndRoll5 {
+    0% {
+      top: 100%;
+    }
+
+    100% {
+      top: -600%;
+    }
+}
+
+@-webkit-keyframes EndRoll6 {
+    0% {
+      top: 100%;
+    }
+
+    100% {
+      top: -550%;
+    }
+}
+
+@keyframes EndRoll6 {
+    0% {
+      top: 100%;
+    }
+
+    100% {
+      top: -550%;
+    }
+}
+
+@-webkit-keyframes EndRoll7 {
+    0% {
+      top: 100%;
+    }
+
+    100% {
+      top: -500%;
+    }
+}
+
+@keyframes EndRoll7 {
+    0% {
+      top: 100%;
+    }
+
+    100% {
+      top: -500%;
+    }
+}
+
+@-webkit-keyframes EndRoll8 {
+    0% {
+      top: 100%;
+    }
+
+    100% {
+      top: -400%;
+    }
+}
+
+@keyframes EndRoll8 {
+    0% {
+      top: 100%;
+    }
+
+    100% {
+      top: -400%;
+    }
+}
+
+@-webkit-keyframes EndRoll9 {
+    0% {
+      top: 100%;
+    }
+
+    100% {
+      top: -350%;
+    }
+}
+
+@keyframes EndRoll9 {
+    0% {
+      top: 100%;
+    }
+
+    100% {
+      top: -350%;
+    }
+}
+
+@-webkit-keyframes EndRoll10 {
+    0% {
+      top: 100%;
+    }
+
+    100% {
+      top: -300%;
+    }
+}
+
+@keyframes EndRoll10 {
+    0% {
+      top: 100%;
+    }
+
+    100% {
+      top: -300%;
+    }
+}
+
+@-webkit-keyframes EndRoll11 {
+    0% {
+      top: 100%;
+    }
+
+    100% {
+      top: -200%;
+    }
+}
+
+@keyframes EndRoll11 {
+    0% {
+      top: 100%;
+    }
+
+    100% {
+      top: -200%;
+    }
+}
 }
 
 .modal-contents .text-area .paused-true .movie {
