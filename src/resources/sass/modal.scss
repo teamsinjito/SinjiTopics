@@ -96,20 +96,27 @@
             }
         }
         /* CSSアニメーションの設定 */
-        
-        $i: 1;
-
-        @while $i <= 5 {
-            @keyframes EndRoll#{$i} {
-                0% {
-                transform: translateY(33% * $i);
-                }
-                100% {
-                transform: translateY(-100%);
-                }
+        @keyframes EndRoll {
+            0% {
+                top:100%;
             }
-            $i: $i + 1;
+            100% {
+                top: -500%;
+            }
         }
+        // $i: 1;
+
+        // @while $i <= 5 {
+        //     @keyframes EndRoll#{$i} {
+        //         0% {
+        //         transform: translateY(33% * $i);
+        //         }
+        //         100% {
+        //         ransform: translateY(-100%);
+        //         }
+        //     }
+        //     $i: $i + 1;
+        // }
 
         .paused-true{
             .movie{

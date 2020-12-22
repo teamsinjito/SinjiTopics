@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="modal-footer-area w-100">
-            <p class="txt_M topic-title w-100 m-0 ml-3">
+            <p class="txt_M topic-title w-100 m-0 pl-3 pr-3">
                 {{topic.title}}
             </p>
             <div class="other-info w-100">
