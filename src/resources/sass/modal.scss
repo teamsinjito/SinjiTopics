@@ -79,6 +79,10 @@
                 overflow-wrap: break-word;
                 color:floralwhite;
                 line-height: 5;
+                padding-top: 80%;
+                @include phone{
+                    padding-top: 90%;
+                }
 
             }
         }
@@ -96,30 +100,34 @@
             }
         }
         /* CSSアニメーションの設定 */
-        @keyframes EndRoll1 {0% {top:100%;}100% {top: -900%;}}
-        @keyframes EndRoll2 {0% {top:100%;}100% {top: -800%;}}
-        @keyframes EndRoll3 {0% {top:100%;}100% {top: -700%;}}
-        @keyframes EndRoll4 {0% {top:100%;}100% {top: -600%;}}
-        @keyframes EndRoll5 {0% {top:100%;}100% {top: -500%;}}
-        @keyframes EndRoll6 {0% {top:100%;}100% {top: -450%;}}
-        @keyframes EndRoll7 {0% {top:100%;}100% {top: -400%;}}
-        @keyframes EndRoll8 {0% {top:100%;}100% {top: -300%;}}
-        @keyframes EndRoll9 {0% {top:100%;}100% {top: -250%;}}
-        @keyframes EndRoll10 {0% {top:100%;}100% {top: -200%;}}
-        @keyframes EndRoll11 {0% {top:100%;}100% {top: -100%;}}
-        @include phone{
-            @keyframes EndRoll1 {0% {top:100%;}100% {top: -1000%;}}
-            @keyframes EndRoll2 {0% {top:100%;}100% {top: -900%;}}
-            @keyframes EndRoll3 {0% {top:100%;}100% {top: -800%;}}
-            @keyframes EndRoll4 {0% {top:100%;}100% {top: -700%;}}
-            @keyframes EndRoll5 {0% {top:100%;}100% {top: -600%;}}
-            @keyframes EndRoll6 {0% {top:100%;}100% {top: -550%;}}
-            @keyframes EndRoll7 {0% {top:100%;}100% {top: -500%;}}
-            @keyframes EndRoll8 {0% {top:100%;}100% {top: -400%;}}
-            @keyframes EndRoll9 {0% {top:100%;}100% {top: -350%;}}
-            @keyframes EndRoll10 {0% {top:100%;}100% {top: -300%;}}
-            @keyframes EndRoll11 {0% {top:100%;}100% {top: -200%;}}
+        @keyframes EndRoll {
+            0% {transform: translateY(0%);}
+            100% {transform: translateY(-100%);}
         }
+        // @keyframes EndRoll1 {0% {top:100%;}100% {top: -900%;}}
+        // @keyframes EndRoll2 {0% {top:100%;}100% {top: -800%;}}
+        // @keyframes EndRoll3 {0% {top:100%;}100% {top: -700%;}}
+        // @keyframes EndRoll4 {0% {top:100%;}100% {top: -600%;}}
+        // @keyframes EndRoll5 {0% {top:100%;}100% {top: -500%;}}
+        // @keyframes EndRoll6 {0% {top:100%;}100% {top: -450%;}}
+        // @keyframes EndRoll7 {0% {top:100%;}100% {top: -400%;}}
+        // @keyframes EndRoll8 {0% {top:100%;}100% {top: -300%;}}
+        // @keyframes EndRoll9 {0% {top:100%;}100% {top: -250%;}}
+        // @keyframes EndRoll10 {0% {top:100%;}100% {top: -200%;}}
+        // @keyframes EndRoll11 {0% {top:100%;}100% {top: -100%;}}
+        // @include phone{
+        //     @keyframes EndRoll1 {0% {top:100%;}100% {top: -1000%;}}
+        //     @keyframes EndRoll2 {0% {top:100%;}100% {top: -900%;}}
+        //     @keyframes EndRoll3 {0% {top:100%;}100% {top: -800%;}}
+        //     @keyframes EndRoll4 {0% {top:100%;}100% {top: -700%;}}
+        //     @keyframes EndRoll5 {0% {top:100%;}100% {top: -600%;}}
+        //     @keyframes EndRoll6 {0% {top:100%;}100% {top: -550%;}}
+        //     @keyframes EndRoll7 {0% {top:100%;}100% {top: -500%;}}
+        //     @keyframes EndRoll8 {0% {top:100%;}100% {top: -400%;}}
+        //     @keyframes EndRoll9 {0% {top:100%;}100% {top: -350%;}}
+        //     @keyframes EndRoll10 {0% {top:100%;}100% {top: -300%;}}
+        //     @keyframes EndRoll11 {0% {top:100%;}100% {top: -200%;}}
+        // }
         //$i: 1;
 
         // @while $i <= 11 {
