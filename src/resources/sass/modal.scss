@@ -80,8 +80,11 @@
                 color:floralwhite;
                 line-height: 5;
                 padding-top: 80%;
+                @include pad{
+                    padding-top: 100%;
+                }
                 @include phone{
-                    padding-top: 90%;
+                    padding-top: 100%;
                 }
 
             }
