@@ -11700,9 +11700,15 @@ main {
   padding-top: 80%;
 }
 
+@media (max-width: 1024px) {
+  .modal-contents .text-area .movie-area .end-roll {
+    padding-top: 100%;
+  }
+}
+
 @media (max-width: 767px) {
   .modal-contents .text-area .movie-area .end-roll {
-    padding-top: 90%;
+    padding-top: 100%;
   }
 }
 
