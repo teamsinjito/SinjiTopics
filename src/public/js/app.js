@@ -68458,7 +68458,7 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
 
       state.indexedDB[obj.table].orderBy('id').count() // 検索結果をカウント
       .then(function (recordCnt) {
-        if (recordCnt <= 100) {
+        if (recordCnt <= 30) {
           var date = new Date();
           var fav;
 
@@ -68491,7 +68491,7 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
             alert("ローカルストレージの容量がいっぱいです。");
           });
         } else {
-          alert("ブラウザストレージの容量がいっぱいです。");
+          alert("ブラウザストレージの容量がいっぱいです。削除してください。");
         }
       });
     },

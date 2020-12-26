@@ -62,7 +62,7 @@ const store = new Vuex.Store({
              // 検索結果をカウント
             .then((recordCnt)=>{
 
-                if(recordCnt <= 100){
+                if(recordCnt <= 30){
 
                     const date = new Date();
                     var fav
@@ -95,8 +95,7 @@ const store = new Vuex.Store({
                     })
 
                 }else{
-
-                    alert("ブラウザストレージの容量がいっぱいです。")
+                    alert("ブラウザストレージの容量がいっぱいです。削除してください。")
 
                 }
             })
